@@ -4,12 +4,12 @@ Given User is in adactin page.
 When User enters "<username>" and "<password>".
 Then useer is clicked login button.
 
- When user is selecting the location.
- When user is selecting the hotel.
- When user is selcting roomtype.
- When user is selecting number of rooms
- When user is selecting number room for adults.
- When user is selecting number of room for children.
+ When user is selecting the location "<location>"
+ When user is selecting the hotel"<hotel>"
+ When user is selcting roomtype"<roomtype>".
+ When user is selecting number of rooms "<numberOfRoom>"
+ When user is selecting number room for adults"<NumnerOfAdult>"
+ When user is selecting number of room for children"<NumberOfChildren>".
  Then user clicking search button
 
 
@@ -19,10 +19,10 @@ Then user is clicking continue button.
 When user is enter his "<firstname>" and "<lastname>"
 When user is enter his "<address>".
 When user is enter the "<cardnumber>".
-When user is select his card type.
-When user is select month and year of his card.
+When user is select his card type"<cardtype>"
+When user is select month "<month>"and year "<year>"of his card.
 When user is enter "<cvv>"
-Then user is clicks book now button.
+Then user is click book now button.
 
 
 
@@ -32,8 +32,8 @@ Then user is clicking logout.
 
 
  Examples:
- |username|password|firstname|lastname|address|cardnumber|cvv|
- |Ahmed7848|Welcome@123|shabeer|Ahmed|No 5 george town,new york.|1234567891234567|123|
+ |username|password|location|hotel|roomtype|numberOfRoom|NumnerOfAdult|NumberOfChildren|firstname|lastname|address|cardnumber|cardtype|month|year|cvv|
+ |Ahmed7848|Welcome@123|Sydney|Hotel Creek|Standard|1 - One|2 - Two|3 - Three|shabeer|Ahmed|No 5 george town,new york.|1234567891234567|VISA|January|2020|123|
 
 
 

@@ -1,0 +1,326 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-05T09:14:45.851Z",
+        "line": 36,
+        "name": "verifying adactin login with valid credential.",
+        "description": "",
+        "id": "verifying-the-whether-user-is-able-to-book-hotel.;verifying-adactin-login-with-valid-credential.;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11175707600,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "User is in adactin page.",
+            "match": {
+              "location": "LoginPageSteps.user_is_in_adactin_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 263118600,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User enters \"Ahmed7848\" and \"Welcome@123\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ahmed7848\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"Welcome@123\"",
+                  "offset": 28
+                }
+              ],
+              "location": "LoginPageSteps.user_enters_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1459571500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "useer is clicked login button.",
+            "match": {
+              "location": "LoginPageSteps.useer_is_clicked_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10474700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is selecting the location.",
+            "match": {
+              "location": "LoginPageSteps.user_is_selecting_the_location()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 132746600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is selecting the hotel.",
+            "match": {
+              "location": "LoginPageSteps.user_is_selecting_the_hotel()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 121866000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user is selcting roomtype.",
+            "match": {
+              "location": "LoginPageSteps.user_is_selcting_roomtype()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 80060800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user is selecting number of rooms",
+            "match": {
+              "location": "LoginPageSteps.user_is_selecting_number_of_rooms()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 145700100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user is selecting number room for adults.",
+            "match": {
+              "location": "LoginPageSteps.user_is_selecting_number_room_for_adults()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 143689100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user is selecting number of room for children.",
+            "match": {
+              "location": "LoginPageSteps.user_is_selecting_number_of_room_for_children()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2139879000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user clicking search button",
+            "match": {
+              "location": "LoginPageSteps.user_clicking_search_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 86573600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user clicking confirm button.",
+            "match": {
+              "location": "LoginPageSteps.user_clicking_confirm_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 989038900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user is clicking continue button.",
+            "match": {
+              "location": "LoginPageSteps.user_is_clicking_continue_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 294983200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user is enter his \"shabeer\" and \"Ahmed\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"shabeer\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Ahmed\"",
+                  "offset": 32
+                }
+              ],
+              "location": "LoginPageSteps.user_is_enter_his_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 226937100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user is enter his \"No 5 george town,new york.\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No 5 george town,new york.\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginPageSteps.user_is_enter_his(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 198804600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user is enter the \"1234567891234567\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234567891234567\"",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginPageSteps.user_is_enter_the(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 124827900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user is select his card type.",
+            "match": {
+              "location": "LoginPageSteps.user_is_select_his_card_type()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 219746700,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user is select month and year of his card.",
+            "match": {
+              "location": "LoginPageSteps.user_is_select_month_and_year_of_his_card()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 97543200,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user is enter \"123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"123\"",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginPageSteps.user_is_enter(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 74086900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user is click book now button.",
+            "match": {
+              "location": "LoginPageSteps.user_is_click_book_now_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7000226400,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user is waiting for his order number is get generate",
+            "match": {
+              "location": "LoginPageSteps.user_is_waiting_for_his_order_number_is_get_generate()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3350742600,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user is printing his order ID.",
+            "match": {
+              "location": "LoginPageSteps.user_is_printing_his_order_ID()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 813750000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user is clicking logout.",
+            "match": {
+              "location": "LoginPageSteps.user_is_clicking_logout()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Verifying the whether user is able to book hotel.",
+    "description": "",
+    "id": "verifying-the-whether-user-is-able-to-book-hotel.",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/Login.feature",
+    "tags": []
+  }
+]
