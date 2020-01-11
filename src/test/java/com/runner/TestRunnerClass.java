@@ -11,9 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src\\test\\resources\\Feature\\Login.feature",glue= {"com.stepdefinition"},dryRun=false,plugin={"json:src\\test\\resources\\Reporting\\AdactinReport\\Sunday.json"}) 
 public class TestRunnerClass {
-	/*@AfterClass
+	@AfterClass
 	public static void afterClass() {
 JvmReport.generateJvmReport(System.getProperty("user.dir")+"\\src\\test\\resources\\Reporting\\AdactinReport\\Sunday.json");
-	}*/
+	}
 
 }

@@ -9,7 +9,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src\\test\\resources\\Feature\\New.feature",glue= {"com.stepdefinition"},plugin= {"usage","json:C:\\Users\\SHABEER AHMED\\eclipse-workspace\\CucumberDemo\\src\\test\\resources\\Reporting\\ironman.json"})
+@CucumberOptions(features="src\\test\\resources\\Feature\\New.feature",glue= {"com.stepdefinition"},plugin= {"pretty","json:C:\\Users\\SHABEER AHMED\\eclipse-workspace\\CucumberDemo\\src\\test\\resources\\Reporting\\ironman.json"})
 public class Sk8Runner {
 	@AfterClass
 	public static void afterClass() {

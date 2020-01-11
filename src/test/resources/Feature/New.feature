@@ -10,10 +10,7 @@ Then user printed all product in the consoul.
 Examples:
   |username|password|product|
   |ahmedshabeer1996@gmail.com|9840585752msA|shirts|
-  |ahmedshabeer1996@gmail.com|9840585752msA|Hoodies|
-  |ahmedshabeer1996@gmail.com|9840585752msA|TEES|
-  |ahmedshabeer1996@gmail.com|9840585752msA|shorts|
-  |ahmedshabeer1996@gmail.com|9840585752msA|tanks|
+  
   
   
   

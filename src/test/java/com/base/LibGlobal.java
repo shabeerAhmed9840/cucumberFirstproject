@@ -25,12 +25,13 @@ public class LibGlobal {
 	File loc;
 
 	// to launch a browser
-	public void launch(String url) {
+	public WebDriver launch(String url) {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\SHABEER AHMED\\eclipse-workspace\\CucumberDemo\\driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(url);
 		driver.manage().window().maximize();
+		return driver;
 	}
 
 	// to sendkeys

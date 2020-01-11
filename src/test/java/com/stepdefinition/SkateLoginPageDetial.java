@@ -1,28 +1,34 @@
 package com.stepdefinition;
 
-import java.util.List;
+import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.base.LibGlobal;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class SkateLoginPageDetial {
-	WebDriver driver;
+public class SkateLoginPageDetial extends LibGlobal{
 	@When("user is in  skateClothing login page.")
 	public void user_is_in_sk_Clothing_login_page() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\SHABEER AHMED\\eclipse-workspace\\CucumberDemo\\driver\\chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\SHABEER AHMED\\eclipse-workspace\\CucumberDemo\\driver\\chromedriver.exe");
 	     driver=new ChromeDriver();
-	     driver.get("https://www.sk8clothing.com/");
+	     driver.get("https://www.sk8clothing.com/");*/
 	}
 
 
 	@When("user logged in using {string}and {string}")
 	public void user_logged_in_using_and(String user, String pass) {
-		WebElement txtregister = driver.findElement(By.xpath("//a[contains(text(),'Login')]"));
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement txtregister = driver.findElement(By.xpath("//a[@title='LOGIN']"));
 		txtregister.click();
 		WebElement txtEmail = driver.findElement(By.xpath("//input[@id='email']"));
 		txtEmail.sendKeys(user);
@@ -41,6 +47,7 @@ public class SkateLoginPageDetial {
 	public void user_searching_in_the_search_bar(String product) {
 		WebElement txtSearch = driver.findElement(By.xpath("//input[@id='search_keywords']"));
 		txtSearch.sendKeys(product);
+		Assert.assertEquals("shirt", txtSearch.getAttribute("value"));
 		
 	    }
 
