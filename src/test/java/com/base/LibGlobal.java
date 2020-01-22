@@ -2,8 +2,11 @@ package com.base;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.Set;
+
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
@@ -13,25 +16,53 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import com.manage.PageObjectManager;
 
 public class LibGlobal {
 	public static WebDriver driver;
-	public static  Select s;
-    String value = null;
+	public static final String USERNAME = "shabeerahmed3";
+	public static final String AUTOMATE_KEY = "iYDNPyVeqaKtxzduhepp";
+	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+
+	public static Select s;
+	PageObjectManager page;
+	String value = null;
 	Actions a;
 	Alert a2;
 	File loc;
 
 	// to launch a browser
-	public WebDriver launch(String url) {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\SHABEER AHMED\\eclipse-workspace\\CucumberDemo\\driver\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get(url);
-		driver.manage().window().maximize();
-		return driver;
+	/*
+	 * public WebDriver launch(String url) {
+	 * System.setProperty("webdriver.chrome.driver",
+	 * "C:\\Users\\SHABEER AHMED\\eclipse-workspace\\CucumberDemo\\driver\\chromedriver.exe"
+	 * ); driver = new ChromeDriver(); driver.get(url);
+	 * driver.manage().window().maximize(); return driver;
+	 */
+	public void excuteCloud() {
+
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("browser", "Chrome");
+		caps.setCapability("browser_version", "79.0");
+		caps.setCapability("os", "Windows");
+		caps.setCapability("os_version", "10");
+		caps.setCapability("resolution", "1024x768");
+		caps.setCapability("name", "Bstack-[Java] Sample Test");
+
+		try {
+			driver = new RemoteWebDriver(new URL(URL), caps);
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void loadUrl(String sum) {
+		driver.get(sum);
 	}
 
 	// to sendkeys
@@ -39,14 +70,15 @@ public class LibGlobal {
 		e.sendKeys(s);
 		return s;
 	}
+
 	public static String getAttribute(WebElement e) {
 		return e.getAttribute("value");
 	}
+
 	// to click
 	public void click(WebElement e) {
 		e.click();
 	}
-
 
 	// to right click
 	public void rightClick(WebElement e) {
@@ -111,6 +143,12 @@ public class LibGlobal {
 
 	}
 
+	public void firstSelectedOption(WebElement e) {
+		s = new Select(e);
+		s.getFirstSelectedOption();
+
+	}
+
 	// to get attribute
 	public void attribute(WebElement e) {
 		String text = e.getAttribute("value");
@@ -118,20 +156,21 @@ public class LibGlobal {
 	}
 
 	// to get text
-	public void getText(WebElement e) {
-		String text = e.getText();
-		System.out.println(text);
+	public static String getText(WebElement e) {
+		return e.getText();
+
 	}
 
 	// to get current url
 	public void currentUrl(WebDriver driver) {
 		String url = driver.getCurrentUrl();
 		System.out.println(url);
-      }
+	}
+
 	public void printAttribute(WebElement e) {
 		String text = e.getAttribute("value");
 		System.out.println(text);
-		}
+	}
 
 	// to get screenshot
 	public void screenShot(String name) throws IOException {
@@ -141,18 +180,24 @@ public class LibGlobal {
 		File desc = new File("C:\\Users\\SHABEER AHMED\\eclipse-workspace\\Employee\\screenshot\\" + name);
 		FileUtils.copyFile(src, desc);
 	}
+
 	public void assertForEquals(String exp) {
-		
+
 		String currentUrl = driver.getCurrentUrl();
-		Assert.assertEquals(currentUrl,exp); 
-		}
-	
-	public void assertForSendKeys(String keys,List<WebElement> e) {
+		Assert.assertEquals(currentUrl, exp);
+	}
+
+	public void assertForSendKeys(String keys, List<WebElement> e) {
 		Assert.assertEquals(keys, getAttribute(e.get(0)));
-		
 
 	}
 
+	/*
+	 * public void assertForSendKeys1(String keys, List<WebElement> e) {
+	 * Assert.assertEquals(keys, firstSelectedOption(e.get(0))));
+	 * 
+	 * }
+	 */
 	public void windowHandel(WebDriver driver) {
 		String par = driver.getWindowHandle();
 		System.out.println(par);

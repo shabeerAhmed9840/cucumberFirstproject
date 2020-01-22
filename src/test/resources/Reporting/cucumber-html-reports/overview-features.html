@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                3,
-                1,
-                2,
+                22,
+                0,
+                0,
                 0,
                 0
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 6) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 22) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                0,
-                1
+                1,
+                0
             ],
             backgroundColor: [
                 "#00B000",
@@ -153,8 +153,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   0,
-                   1
+                   1,
+                   0
                ],
                backgroundColor: [
                 "#00B000",
@@ -228,7 +228,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>Sk8_Project</td>
-            <td>11 Jan 2020, 23:22</td>
+            <td>18 Jan 2020, 17:07</td>
     </tr>
   </tbody>
 </table>
@@ -345,54 +345,54 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="report-feature_3942339312.html">Verifying user can shop online.</a></td>
+        <td class="tagname"><a href="report-feature_3331281273.html">Verifying the whether user is able to book hotel.</a></td>
 
-        <td      class="passed"    >3</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >2</td>
+        <td      class="passed"    >22</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">6</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">22</td>
 
+        <td  class="passed"    >1</td>
         <td >0</td>
-        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="12604633801">12.604</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="41254938000">41.254</td>
+        <td class="passed">Passed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
+      <td>22</td>
       <td>0</td>
       <td>0</td>
-      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>22</td>
 
+      <td>1</td>
       <td>0</td>
       <td>1</td>
-      <td>1</td>
 
-      <td class="duration">12.604</td>
+      <td class="duration">41.254</td>
       <td>1</td>
     </tr>
     <tr>
       <td></td>
-            <td>50.00%</td>
-      <td>16.67%</td>
-      <td>33.33%</td>
+            <td>100.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>0.00%</td>
       <td>100.00%</td>
-      <td></td>
-      <td></td>
       <td>0.00%</td>
+      <td></td>
+      <td></td>
+      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>

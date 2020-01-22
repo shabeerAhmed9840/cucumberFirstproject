@@ -13,12 +13,12 @@ import io.cucumber.java.Before;
 
 public class HookClassForSkate extends LibGlobal {
 
-	@Before
+	//@Before
 	public void beforeScenario() {
 		launch("https://www.sk8clothing.com/");
 	}
 
-	@After
+	//@After
 	public void afterScenario(Scenario sc) {
 		if (sc.isFailed()) {
 			TakesScreenshot screenShot = (TakesScreenshot) driver;
