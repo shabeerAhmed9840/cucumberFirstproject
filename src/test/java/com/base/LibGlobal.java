@@ -36,14 +36,17 @@ public class LibGlobal {
 	File loc;
 
 	// to launch a browser
-	/*
-	 * public WebDriver launch(String url) {
-	 * System.setProperty("webdriver.chrome.driver",
-	 * "C:\\Users\\SHABEER AHMED\\eclipse-workspace\\CucumberDemo\\driver\\chromedriver.exe"
-	 * ); driver = new ChromeDriver(); driver.get(url);
-	 * driver.manage().window().maximize(); return driver;
-	 */
-	public void excuteCloud() {
+
+	public WebDriver launch(String url) {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\SHABEER AHMED\\eclipse-workspace\\CucumberDemo\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+		return driver;
+	}
+
+	/*public void excuteCloud() {
 
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("browser", "Chrome");
@@ -60,7 +63,7 @@ public class LibGlobal {
 			e.printStackTrace();
 		}
 	}
-
+*/
 	public void loadUrl(String sum) {
 		driver.get(sum);
 	}

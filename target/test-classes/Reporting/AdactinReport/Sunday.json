@@ -3,20 +3,42 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-01-18T11:36:46.231Z",
-        "line": 36,
+        "start_timestamp": "2020-02-02T08:02:07.839Z",
+        "before": [
+          {
+            "result": {
+              "duration": 21963065000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HookClassForSkate.beforeForAdactin()"
+            }
+          }
+        ],
+        "line": 37,
         "name": "verifying adactin login with valid credential.",
         "description": "",
         "id": "verifying-the-whether-user-is-able-to-book-hotel.;verifying-adactin-login-with-valid-credential.;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 787300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HookClassForSkate.afterScenario(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 13869136200,
+              "duration": 4696600,
               "status": "passed"
             },
-            "line": 3,
+            "line": 4,
             "name": "User is in adactin page.",
             "match": {
               "location": "LoginPageSteps.user_is_in_adactin_page()"
@@ -25,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 1209510900,
+              "duration": 1438741700,
               "status": "passed"
             },
-            "line": 4,
+            "line": 5,
             "name": "User enters \"Ahmed7848\" and \"Welcome@123\".",
             "match": {
               "arguments": [
@@ -47,10 +69,10 @@
           },
           {
             "result": {
-              "duration": 1295209100,
+              "duration": 2501775000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 6,
             "name": "useer is clicked login button.",
             "match": {
               "location": "LoginPageSteps.useer_is_clicked_login_button()"
@@ -59,10 +81,10 @@
           },
           {
             "result": {
-              "duration": 1254739300,
+              "duration": 580830300,
               "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "user is selecting the location \"Sydney\"",
             "match": {
               "arguments": [
@@ -77,10 +99,10 @@
           },
           {
             "result": {
-              "duration": 696771000,
+              "duration": 247531400,
               "status": "passed"
             },
-            "line": 8,
+            "line": 9,
             "name": "user is selecting the hotel\"Hotel Creek\"",
             "match": {
               "arguments": [
@@ -95,10 +117,10 @@
           },
           {
             "result": {
-              "duration": 692975400,
+              "duration": 251018700,
               "status": "passed"
             },
-            "line": 9,
+            "line": 10,
             "name": "user is selcting roomtype\"Standard\".",
             "match": {
               "arguments": [
@@ -113,10 +135,10 @@
           },
           {
             "result": {
-              "duration": 606228200,
+              "duration": 135061600,
               "status": "passed"
             },
-            "line": 10,
+            "line": 11,
             "name": "user is selecting number of rooms \"1 - One\"",
             "match": {
               "arguments": [
@@ -131,10 +153,10 @@
           },
           {
             "result": {
-              "duration": 625941100,
+              "duration": 122064600,
               "status": "passed"
             },
-            "line": 11,
+            "line": 12,
             "name": "user is selecting number room for adults\"2 - Two\"",
             "match": {
               "arguments": [
@@ -149,10 +171,10 @@
           },
           {
             "result": {
-              "duration": 618649800,
+              "duration": 179572200,
               "status": "passed"
             },
-            "line": 12,
+            "line": 13,
             "name": "user is selecting number of room for children\"3 - Three\".",
             "match": {
               "arguments": [
@@ -167,10 +189,10 @@
           },
           {
             "result": {
-              "duration": 1441837700,
+              "duration": 1474440800,
               "status": "passed"
             },
-            "line": 13,
+            "line": 14,
             "name": "user clicking search button",
             "match": {
               "location": "LoginPageSteps.user_clicking_search_button()"
@@ -179,10 +201,10 @@
           },
           {
             "result": {
-              "duration": 535918000,
+              "duration": 204598500,
               "status": "passed"
             },
-            "line": 16,
+            "line": 17,
             "name": "user clicking confirm button.",
             "match": {
               "location": "LoginPageSteps.user_clicking_confirm_button()"
@@ -191,10 +213,10 @@
           },
           {
             "result": {
-              "duration": 1100989400,
+              "duration": 1046214600,
               "status": "passed"
             },
-            "line": 17,
+            "line": 18,
             "name": "user is clicking continue button.",
             "match": {
               "location": "LoginPageSteps.user_is_clicking_continue_button()"
@@ -203,10 +225,10 @@
           },
           {
             "result": {
-              "duration": 1137309600,
+              "duration": 505416400,
               "status": "passed"
             },
-            "line": 19,
+            "line": 20,
             "name": "user is enter his \"shabeer\" and \"Ahmed\"",
             "match": {
               "arguments": [
@@ -225,10 +247,10 @@
           },
           {
             "result": {
-              "duration": 654401500,
+              "duration": 244938800,
               "status": "passed"
             },
-            "line": 20,
+            "line": 21,
             "name": "user is enter his \"No 5 george town,new york.\".",
             "match": {
               "arguments": [
@@ -243,10 +265,10 @@
           },
           {
             "result": {
-              "duration": 561485100,
+              "duration": 264831300,
               "status": "passed"
             },
-            "line": 21,
+            "line": 22,
             "name": "user is enter the \"1234567891234567\".",
             "match": {
               "arguments": [
@@ -261,10 +283,10 @@
           },
           {
             "result": {
-              "duration": 638080000,
+              "duration": 180552100,
               "status": "passed"
             },
-            "line": 22,
+            "line": 23,
             "name": "user is select his card type\"VISA\"",
             "match": {
               "arguments": [
@@ -279,10 +301,10 @@
           },
           {
             "result": {
-              "duration": 1288630900,
+              "duration": 269762300,
               "status": "passed"
             },
-            "line": 23,
+            "line": 24,
             "name": "user is select month \"January\"and year \"2020\"of his card.",
             "match": {
               "arguments": [
@@ -301,10 +323,10 @@
           },
           {
             "result": {
-              "duration": 304060800,
+              "duration": 137051300,
               "status": "passed"
             },
-            "line": 24,
+            "line": 25,
             "name": "user is enter \"123\"",
             "match": {
               "arguments": [
@@ -319,10 +341,10 @@
           },
           {
             "result": {
-              "duration": 229979200,
+              "duration": 86230300,
               "status": "passed"
             },
-            "line": 25,
+            "line": 26,
             "name": "user is click book now button.",
             "match": {
               "location": "LoginPageSteps.user_is_click_book_now_button()"
@@ -331,10 +353,10 @@
           },
           {
             "result": {
-              "duration": 94060100,
+              "duration": 4954800,
               "status": "passed"
             },
-            "line": 29,
+            "line": 30,
             "name": "user is waiting for his order number is get generate",
             "match": {
               "location": "LoginPageSteps.user_is_waiting_for_his_order_number_is_get_generate()"
@@ -343,10 +365,10 @@
           },
           {
             "result": {
-              "duration": 5506056900,
+              "duration": 9610108000,
               "status": "passed"
             },
-            "line": 30,
+            "line": 31,
             "name": "user is printing his order ID.",
             "match": {
               "location": "LoginPageSteps.user_is_printing_his_order_ID()"
@@ -355,15 +377,20 @@
           },
           {
             "result": {
-              "duration": 6892967800,
+              "duration": 1811067800,
               "status": "passed"
             },
-            "line": 31,
+            "line": 32,
             "name": "user is clicking logout.",
             "match": {
               "location": "LoginPageSteps.user_is_clicking_logout()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
           }
         ]
       }

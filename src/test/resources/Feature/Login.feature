@@ -1,4 +1,5 @@
 Feature: Verifying the whether user is able to book hotel.
+@smoke
 Scenario Outline: verifying adactin login with valid credential.
 Given User is in adactin page.
 When User enters "<username>" and "<password>".

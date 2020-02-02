@@ -1,10 +1,8 @@
 package com.stepdefinition;
 
-import org.junit.AfterClass;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-
 import com.base.LibGlobal;
 
 import io.cucumber.core.api.Scenario;
@@ -13,12 +11,18 @@ import io.cucumber.java.Before;
 
 public class HookClassForSkate extends LibGlobal {
 
-	//@Before
+	@Before(value="~@smoke", order=1)
 	public void beforeScenario() {
 		launch("https://www.sk8clothing.com/");
 	}
+	
+	@Before(value="@smoke",order=2)
+	public void beforeForAdactin() {
+		launch("https://www.adactin.com/HotelApp/");
 
-	//@After
+	}
+
+	@After(order = 2)
 	public void afterScenario(Scenario sc) {
 		if (sc.isFailed()) {
 			TakesScreenshot screenShot = (TakesScreenshot) driver;
@@ -26,8 +30,10 @@ public class HookClassForSkate extends LibGlobal {
 			sc.embed(failedTest, "failed/png");
 
 		}
+	}
+	@After(order =1)
+	public void quit() {
 		driver.quit();
-
 	}
 
 }

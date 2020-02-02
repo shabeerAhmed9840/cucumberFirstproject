@@ -1,15 +1,9 @@
 package com.stepdefinition;
 
-import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import com.base.LibGlobal;
 import com.manage.PageObjectManager;
-import com.screen.BookHotelPojo;
-import com.screen.BookingConfirmPojo;
-import com.screen.LoginPagePojo;
-import com.screen.SearchHotelpojo;
-import com.screen.SelectHotelPojo;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -21,8 +15,8 @@ public class LoginPageSteps extends LibGlobal {
 
 	@Given("User is in adactin page.")
 	public void user_is_in_adactin_page(){
-		excuteCloud();
-		loadUrl("https://www.adactin.com/HotelApp/");
+		
+		//loadUrl("https://www.adactin.com/HotelApp/");
 		
 	}
 

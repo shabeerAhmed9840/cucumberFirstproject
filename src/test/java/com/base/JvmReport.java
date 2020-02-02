@@ -9,7 +9,7 @@ import net.masterthought.cucumber.ReportBuilder;
 
 public class JvmReport {
 	public static void generateJvmReport(String jsonfile) {
-		File loc=new File(System.getProperty("user.dir")+"\\src\\test\\resources\\Reporting\\");
+		File loc=new File(System.getProperty("user.dir")+"\\src\\test\\resources\\Reporting");
 		Configuration con=new Configuration(loc, "Sk8_Project");
 		con.addClassifications("Browser", "Chrome");
 		con.addClassifications("Spirint", "10");
@@ -20,8 +20,6 @@ public class JvmReport {
         j.add(jsonfile);
         ReportBuilder builder=new ReportBuilder(j, con);
         builder.generateReports();
-
-
 	}
 
 }
