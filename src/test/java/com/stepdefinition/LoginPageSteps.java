@@ -163,6 +163,7 @@ public class LoginPageSteps extends LibGlobal {
 		assertForEquals("https://www.adactin.com/HotelApp/BookingConfirm.php");
 		click(page.getBookingConfirmPojo().getBtnLogOut().get(0));
 		driver.quit();
+		system.out.println("kingofking");
 	}
 
 }
