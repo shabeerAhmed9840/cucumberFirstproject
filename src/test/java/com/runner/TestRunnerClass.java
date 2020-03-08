@@ -1,3 +1,4 @@
+
 package com.runner;
 
 import org.junit.AfterClass;
@@ -10,13 +11,14 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src\\test\\resources\\Feature\\Login.feature", glue = {
-		"com.stepdefinition" }, dryRun = false, tags = {
-				"@smoke" }, plugin = { "json:src\\test\\resources\\Reporting\\AdactinReport\\Sunday.json" })
+		"com.stepdefinition" }, monochrome = true, strict = true, dryRun = false, tags = { "@smoke" }, plugin = // {
+																										
+				// "rerun:\\src\\test\\resources\\FailedTestCase\\Rerun",
+{ "json:src\\test\\resources\\Reporting\\AdactinReport\\monday.json" })
 public class TestRunnerClass {
-	@AfterClass
-	public static void afterClass() {
-		JvmReport.generateJvmReport(
-				System.getProperty("user.dir") + "\\src\\test\\resources\\Reporting\\AdactinReport\\Sunday.json");
-	}
-
+	/*
+	 * @AfterClass public static void afterClass() { JvmReport.generateJvmReport(
+	 * System.getProperty("user.dir") +
+	 * "\\src\\test\\resources\\Reporting\\AdactinReport\\Sunday.json"); }
+	 */
 }

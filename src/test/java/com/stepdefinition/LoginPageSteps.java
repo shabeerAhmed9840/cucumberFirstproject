@@ -14,15 +14,16 @@ public class LoginPageSteps extends LibGlobal {
 	PageObjectManager page;
 
 	@Given("User is in adactin page.")
-	public void user_is_in_adactin_page(){
-		
-		//loadUrl("https://www.adactin.com/HotelApp/");
-		
+	public void user_is_in_adactin_page() {
+
+		// loadUrl("https://www.adactin.com/HotelApp/");
+
 	}
 
 	@When("User enters {string} and {string}.")
 	public void user_enters_and(String username, String password) {
 		page = new PageObjectManager();
+
 		fill(page.getLoginPagePojo().getUser().get(0), username);
 		assertForSendKeys(username, page.getLoginPagePojo().getUser());
 		fill(page.getLoginPagePojo().getPass().get(0), password);
@@ -56,26 +57,23 @@ public class LoginPageSteps extends LibGlobal {
 
 	}
 
-	@When("user is selecting number of rooms {string}")
-	public void user_is_selecting_number_of_rooms(String noOfRoom) {
-		dropDownBytext(page.getSearchHotelpojo().getNumberOfRoom().get(0), noOfRoom);
-	
-		
+	@When("user is selecting number of rooms {int}")
+	public void user_is_selecting_number_of_rooms(Integer noOfRoom) {
+		dropDownByIndex(page.getSearchHotelpojo().getNumberOfRoom().get(0), noOfRoom);
+		assertForSendKeysForInteger(noOfRoom, page.getSearchHotelpojo().getNumberOfRoom());
+	}
+
+	@When("user is selecting number room for adults {int}")
+	public void user_is_selecting_number_room_for_adults(Integer noOfAdults) {
+		dropDownByIndex(page.getSearchHotelpojo().getAdultPerRoom().get(0), noOfAdults);
+		assertForSendKeysForInteger(noOfAdults, page.getSearchHotelpojo().getAdultPerRoom());
 
 	}
 
-	@When("user is selecting number room for adults{string}")
-	public void user_is_selecting_number_room_for_adults(String noOfAdults) {
-		dropDownBytext(page.getSearchHotelpojo().getAdultPerRoom().get(0), noOfAdults);
-		//assertForSendKeys(noOfAdults, page.getSearchHotelpojo().getAdultPerRoom());
-
-	}
-
-	@When("user is selecting number of room for children{string}.")
-	public void user_is_selecting_number_of_room_for_children(String noOfChildren) {
-		dropDownBytext(page.getSearchHotelpojo().getChildrenPerRoom().get(0), noOfChildren);
-		//assertForSendKeys(noOfChildren, page.getSearchHotelpojo().getChildrenPerRoom());
-
+	@When("user is selecting number of room for children {int}.")
+	public void user_is_selecting_number_of_room_for_children(Integer noOfChildren) {
+		dropDownByIndex(page.getSearchHotelpojo().getChildrenPerRoom().get(0), noOfChildren);
+		assertForSendKeysForInteger(noOfChildren, page.getSearchHotelpojo().getChildrenPerRoom());
 	}
 
 	@Then("user clicking search button")
@@ -129,16 +127,16 @@ public class LoginPageSteps extends LibGlobal {
 	@When("user is select month {string}and year {string}of his card.")
 	public void user_is_select_month_and_year_of_his_card(String month, String year) {
 		dropDownBytext(page.getBookHotelPojo().getLstMonth().get(0), month);
-		//assertForSendKeys(month, page.getBookHotelPojo().getLstMonth());
+		// assertForSendKeys(month, page.getBookHotelPojo().getLstMonth());
 		dropDownBytext(page.getBookHotelPojo().getLstYear().get(0), year);
-		//assertForSendKeys(year, page.getBookHotelPojo().getLstYear());
+		// assertForSendKeys(year, page.getBookHotelPojo().getLstYear());
 
 	}
 
 	@When("user is enter {string}")
 	public void user_is_enter(String ccv) {
 		fill(page.getBookHotelPojo().getLstCvv().get(0), ccv);
-		//assertForSendKeys(ccv, page.getBookHotelPojo().getLstCvv());
+		// assertForSendKeys(ccv, page.getBookHotelPojo().getLstCvv());
 
 	}
 

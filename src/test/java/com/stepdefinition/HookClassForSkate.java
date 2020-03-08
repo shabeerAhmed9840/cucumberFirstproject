@@ -11,7 +11,7 @@ import io.cucumber.java.Before;
 
 public class HookClassForSkate extends LibGlobal {
 
-	@Before(value="~@smoke", order=1)
+	@Before(value="@sk8", order=1)
 	public void beforeScenario() {
 		launch("https://www.sk8clothing.com/");
 	}

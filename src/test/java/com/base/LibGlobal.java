@@ -46,24 +46,20 @@ public class LibGlobal {
 		return driver;
 	}
 
-	/*public void excuteCloud() {
-
-		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability("browser", "Chrome");
-		caps.setCapability("browser_version", "79.0");
-		caps.setCapability("os", "Windows");
-		caps.setCapability("os_version", "10");
-		caps.setCapability("resolution", "1024x768");
-		caps.setCapability("name", "Bstack-[Java] Sample Test");
-
-		try {
-			driver = new RemoteWebDriver(new URL(URL), caps);
-		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-*/
+	/*
+	 * public void excuteCloud() {
+	 * 
+	 * DesiredCapabilities caps = new DesiredCapabilities();
+	 * caps.setCapability("browser", "Chrome");
+	 * caps.setCapability("browser_version", "79.0"); caps.setCapability("os",
+	 * "Windows"); caps.setCapability("os_version", "10");
+	 * caps.setCapability("resolution", "1024x768"); caps.setCapability("name",
+	 * "Bstack-[Java] Sample Test");
+	 * 
+	 * try { driver = new RemoteWebDriver(new URL(URL), caps); } catch
+	 * (MalformedURLException e) { // TODO Auto-generated catch block
+	 * e.printStackTrace(); } }
+	 */
 	public void loadUrl(String sum) {
 		driver.get(sum);
 	}
@@ -195,12 +191,18 @@ public class LibGlobal {
 
 	}
 
-	/*
-	 * public void assertForSendKeys1(String keys, List<WebElement> e) {
-	 * Assert.assertEquals(keys, firstSelectedOption(e.get(0))));
-	 * 
-	 * }
-	 */
+	public void assertForSendKeysForInteger(int keys, List<WebElement> e) {
+		String a = getAttribute(e.get(0));
+		int i = Integer.parseInt(a);
+		Assert.assertEquals(keys, i);
+
+	}
+	public void isSelected(WebElement e,String s1) {
+		boolean s = e.isSelected();
+	
+
+	}
+
 	public void windowHandel(WebDriver driver) {
 		String par = driver.getWindowHandle();
 		System.out.println(par);

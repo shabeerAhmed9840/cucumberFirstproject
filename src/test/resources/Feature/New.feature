@@ -1,5 +1,7 @@
+
+@sk8
 Feature: Verifying user can shop online.
-   @Reg
+   
   Scenario Outline: Verifying whether user can able to choose multiple product.
     Given User is in skateclothing login page
     When user logged in using "<username>"and "<password>"
@@ -12,7 +14,7 @@ Feature: Verifying user can shop online.
     Examples: 
       | username                   | password      | product |
       | ahmedshabeer1996@gmail.com | 9840585752msA | shirts  |
-   @Smoke
+   
   Scenario Outline: Verifying whether user can able to choose multiple product.
     Given User is in skateclothing login page
     When user logged in using "<username>"and "<password>"
@@ -25,7 +27,7 @@ Feature: Verifying user can shop online.
     Examples: 
       | username                   | password      | product |
       | ahmedshabeer1996@gmail.com | 9840585752msA | shoes  |
-   @fun
+   
   Scenario Outline: Verifying whether user can able to choose multiple product.
     Given User is in skateclothing login page
     When user logged in using "<username>"and "<password>"

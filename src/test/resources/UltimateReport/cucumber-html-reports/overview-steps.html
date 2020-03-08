@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Sk8_Project</td>
+            <td>04 Mar 2020, 22:08</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">HookClassForSkate.afterScenario(Scenario)</td>
+              <td>4</td>
+              <td class="duration" data-value="3542773900">3.542</td>
+              <td class="duration" data-value="3542773900">14.169</td>
+              <td class="duration" data-value="14171095600">14.171</td>
+              <td class="failed">25.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HookClassForSkate.beforeForAdactin()</td>
+              <td>1</td>
+              <td class="duration" data-value="19422611800">19.422</td>
+              <td class="duration" data-value="19422611800">19.422</td>
+              <td class="duration" data-value="19422611800">19.422</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HookClassForSkate.beforeScenario()</td>
+              <td>3</td>
+              <td class="duration" data-value="24673648600">24.673</td>
+              <td class="duration" data-value="24673648600">40.119</td>
+              <td class="duration" data-value="74020945800">1:14.020</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HookClassForSkate.quit()</td>
+              <td>4</td>
+              <td class="duration" data-value="158427150">0.158</td>
+              <td class="duration" data-value="158427150">0.633</td>
+              <td class="duration" data-value="633708600">0.633</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.useer_is_clicked_login_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2529907900">2.529</td>
+              <td class="duration" data-value="2529907900">2.529</td>
+              <td class="duration" data-value="2529907900">2.529</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_clicking_confirm_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="506310500">0.506</td>
+              <td class="duration" data-value="506310500">0.506</td>
+              <td class="duration" data-value="506310500">0.506</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_clicking_search_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="5257362000">5.257</td>
+              <td class="duration" data-value="5257362000">5.257</td>
+              <td class="duration" data-value="5257362000">5.257</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_enters_and(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2893122500">2.893</td>
+              <td class="duration" data-value="2893122500">2.893</td>
+              <td class="duration" data-value="2893122500">2.893</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_click_book_now_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="80902400">0.080</td>
+              <td class="duration" data-value="80902400">0.080</td>
+              <td class="duration" data-value="80902400">0.080</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_clicking_continue_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="1463434200">1.463</td>
+              <td class="duration" data-value="1463434200">1.463</td>
+              <td class="duration" data-value="1463434200">1.463</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_clicking_logout()</td>
+              <td>1</td>
+              <td class="duration" data-value="2072870600">2.072</td>
+              <td class="duration" data-value="2072870600">2.072</td>
+              <td class="duration" data-value="2072870600">2.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_enter(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="89502000">0.089</td>
+              <td class="duration" data-value="89502000">0.089</td>
+              <td class="duration" data-value="89502000">0.089</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_enter_his(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="253718500">0.253</td>
+              <td class="duration" data-value="253718500">0.253</td>
+              <td class="duration" data-value="253718500">0.253</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_enter_his_and(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="800369900">0.800</td>
+              <td class="duration" data-value="800369900">0.800</td>
+              <td class="duration" data-value="800369900">0.800</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_enter_the(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="236611200">0.236</td>
+              <td class="duration" data-value="236611200">0.236</td>
+              <td class="duration" data-value="236611200">0.236</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_in_adactin_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="809000">0.000</td>
+              <td class="duration" data-value="809000">0.000</td>
+              <td class="duration" data-value="809000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_printing_his_order_ID()</td>
+              <td>1</td>
+              <td class="duration" data-value="5583045400">5.583</td>
+              <td class="duration" data-value="5583045400">5.583</td>
+              <td class="duration" data-value="5583045400">5.583</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_selcting_roomtype(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="171531900">0.171</td>
+              <td class="duration" data-value="171531900">0.171</td>
+              <td class="duration" data-value="171531900">0.171</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_select_his_card_type(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="186159200">0.186</td>
+              <td class="duration" data-value="186159200">0.186</td>
+              <td class="duration" data-value="186159200">0.186</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_select_month_and_year_of_his_card(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="228572000">0.228</td>
+              <td class="duration" data-value="228572000">0.228</td>
+              <td class="duration" data-value="228572000">0.228</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_selecting_number_of_room_for_children(Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="236487700">0.236</td>
+              <td class="duration" data-value="236487700">0.236</td>
+              <td class="duration" data-value="236487700">0.236</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_selecting_number_of_rooms(Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="202942600">0.202</td>
+              <td class="duration" data-value="202942600">0.202</td>
+              <td class="duration" data-value="202942600">0.202</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_selecting_number_room_for_adults(Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="280661200">0.280</td>
+              <td class="duration" data-value="280661200">0.280</td>
+              <td class="duration" data-value="280661200">0.280</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_selecting_the_hotel(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="187835800">0.187</td>
+              <td class="duration" data-value="187835800">0.187</td>
+              <td class="duration" data-value="187835800">0.187</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_selecting_the_location(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="621362500">0.621</td>
+              <td class="duration" data-value="621362500">0.621</td>
+              <td class="duration" data-value="621362500">0.621</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageSteps.user_is_waiting_for_his_order_number_is_get_generate()</td>
+              <td>1</td>
+              <td class="duration" data-value="3050200">0.003</td>
+              <td class="duration" data-value="3050200">0.003</td>
+              <td class="duration" data-value="3050200">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SkateLoginPageDetial.clicked_search_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="27300">0.000</td>
+              <td class="duration" data-value="27300">0.000</td>
+              <td class="duration" data-value="81900">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SkateLoginPageDetial.user_click_the_login_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="32933">0.000</td>
+              <td class="duration" data-value="32933">0.000</td>
+              <td class="duration" data-value="98800">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SkateLoginPageDetial.user_closing_the_browser()</td>
+              <td>3</td>
+              <td class="duration" data-value="33133">0.000</td>
+              <td class="duration" data-value="33133">0.000</td>
+              <td class="duration" data-value="99400">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SkateLoginPageDetial.user_is_in_skateclothing_login_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="63266">0.000</td>
+              <td class="duration" data-value="63266">0.000</td>
+              <td class="duration" data-value="189800">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SkateLoginPageDetial.user_logged_in_using_and(String,String)</td>
+              <td>3</td>
+              <td class="duration" data-value="35900">0.000</td>
+              <td class="duration" data-value="35900">0.000</td>
+              <td class="duration" data-value="107700">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SkateLoginPageDetial.user_printed_all_product_in_the_consoul()</td>
+              <td>3</td>
+              <td class="duration" data-value="24533">0.000</td>
+              <td class="duration" data-value="24533">0.000</td>
+              <td class="duration" data-value="73600">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SkateLoginPageDetial.user_searching_in_the_search_bar(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="25833">0.000</td>
+              <td class="duration" data-value="25833">0.000</td>
+              <td class="duration" data-value="77500">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>33</td>
+            <td>55</td>
+            <td class="duration">2.402</td>
+            <td class="duration">1:14.020</td>
+            <td class="duration">2:12.135</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
