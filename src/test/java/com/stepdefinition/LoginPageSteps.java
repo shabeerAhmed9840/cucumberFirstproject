@@ -57,7 +57,7 @@ public class LoginPageSteps extends LibGlobal {
 
 	}
 
-	@When("user is selecting number of rooms {int}")
+	@When("user is selecting number of rooms {int}") 
 	public void user_is_selecting_number_of_rooms(Integer noOfRoom) {
 		dropDownByIndex(page.getSearchHotelpojo().getNumberOfRoom().get(0), noOfRoom);
 		assertForSendKeysForInteger(noOfRoom, page.getSearchHotelpojo().getNumberOfRoom());
@@ -163,7 +163,7 @@ public class LoginPageSteps extends LibGlobal {
 		assertForEquals("https://www.adactin.com/HotelApp/BookingConfirm.php");
 		click(page.getBookingConfirmPojo().getBtnLogOut().get(0));
 		driver.quit();
-		system.out.println("kingofking");
+
 	}
 
 }

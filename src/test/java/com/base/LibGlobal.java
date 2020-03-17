@@ -197,9 +197,9 @@ public class LibGlobal {
 		Assert.assertEquals(keys, i);
 
 	}
-	public void isSelected(WebElement e,String s1) {
+
+	public void isSelected(WebElement e) {
 		boolean s = e.isSelected();
-	
 
 	}
 
