@@ -1,4 +1,3 @@
-
 @smoke
 
 Feature: Verifying the whether user is able to book hotel.
